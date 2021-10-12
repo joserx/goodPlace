@@ -22,7 +22,7 @@ mongoose
   .then(() => {
     app.use("/", require("./routes/routes"));
 
-    app.listen(3000, () => {
+    app.listen(process.env.PORT || 3000, () => {
       console.log("Servidor na porta 3000");
     });
   });
